@@ -1,5 +1,6 @@
 package github.salemby.bank.app;
 
+import com.sun.source.tree.NewArrayTree;
 import github.salemby.bank.model.*;
 import github.salemby.bank.model.atm.CashMachine;
 import github.salemby.bank.model.exception.InsufficientFundsException;
@@ -18,7 +19,6 @@ public class MainClass {
 
         Client holder2 = new Client();
         EspecialAccount yourAccount = new EspecialAccount(holder2, 321, 4321, new BigDecimal("10000"));
-
 
         CashMachine atm = new CashMachine();
 

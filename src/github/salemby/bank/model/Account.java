@@ -34,7 +34,7 @@ public abstract class Account {
     }
 
     public void withdraw(BigDecimal value) {
-        if (getAvalibleFunds().subtract(value).compareTo(BigDecimal.ZERO) < 0) {
+        if (getAvailableFunds().subtract(value).compareTo(BigDecimal.ZERO) < 0) {
             throw new InsufficientFundsException("insufficient funds");
         } else if (value.compareTo(BigDecimal.ZERO) <= 0) {
             throw new IllegalStateException("Enter a valid value");
@@ -66,7 +66,7 @@ public abstract class Account {
         return funds;
     }
 
-    public BigDecimal getAvalibleFunds() {
+    public BigDecimal getAvailableFunds() {
         return getFunds();
     }
 

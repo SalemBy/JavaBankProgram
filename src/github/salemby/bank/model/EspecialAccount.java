@@ -17,7 +17,7 @@ public class EspecialAccount extends Account {
     }
 
     @Override
-    public BigDecimal getAvalibleFunds() {
+    public BigDecimal getAvailableFunds() {
         return getFunds().add(getLimitValue());
     }
 

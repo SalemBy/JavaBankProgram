@@ -10,7 +10,7 @@ public class CashMachine {
         System.out.println("Owner: " + account.getOwner().getName());
         System.out.println("Account Type: " + account.getOwner().getType());
         System.out.println("Funds: " + account.getFunds());
-        System.out.println("Available Funds: " + account.getAvalibleFunds());
+        System.out.println("Available Funds: " + account.getAvailableFunds());
     }
 
     public void payingBills(PayableDocument document, Account account, Account receiver) {
@@ -32,7 +32,6 @@ public class CashMachine {
         document.revertPayment();
         account.deposit(document.getTotalValue());
         receiver.withdraw(document.getTotalValue());
-
 
     }
 
